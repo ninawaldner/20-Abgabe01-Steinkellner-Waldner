@@ -2,7 +2,6 @@
 
 This is a project created by Rosa Steinkellner and Nina Waldner
 
-
 The purpose of this project is to get familiar with JavaDoc, Github and Junit-testing.
 An existing Java-Project named "Drinks" will be extended.
 The project "Drinks" already contains:
@@ -10,7 +9,8 @@ The project "Drinks" already contains:
 - Liquid.java
 - LiquidTest.java
 - SimpleDrinks.java (extends class Drink.java)
-All classes contain constructors, getters and setters and JavaDoc. Also already implemented: Tests using junit5.
+All classes contain constructors, getters & setters and JavaDoc. 
+Tests using junit5 are also already implemented.
 ******
 ***Planned Extensions:***
 
@@ -18,15 +18,17 @@ All classes contain constructors, getters and setters and JavaDoc. Also already 
 2. *Exception*
 3. *Collections*<br/> List of ingredients
 
-*** Next version ***
+***Next version***
 Collections: 
-1.Map: 
-- ingredients: String
-- amounts: Integer in milli liters
-2.Decorations: one decorational item per drink (ananas, cherry, ..)
+1. Map:  
+- String ingredient
+- Integer amount in milliliters
 
-or 
-- List of an order of Cocktails
+2. Decorations: one decorational item per drink (ananas, cherry, ..)
+String decoration
 
-Exception: 
-- drivingCar --> now you can't drive a car anymore (alcohol level)
+    or   
+    - List of an order of Cocktails
+
+Exception: DoNotDriveException
+- drivingCar () --> now you can't drive a car anymore (alcohol level)
