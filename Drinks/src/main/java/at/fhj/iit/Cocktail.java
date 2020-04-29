@@ -3,22 +3,32 @@ package at.fhj.iit;
 
 import java.util.HashMap;
 
-
 /**
  * Class represents a cocktail drink liquid which mixes liquids with several other ingredients
  * and makes it pretty with a delicious decoration
  */
 public class Cocktail extends Drink{
 
-
+    /**
+     * name of ingredient
+     */
     private String ingredient;
+    /**
+     * amount in milliliters
+     */
     private int amountMilliLiters;
+    /**
+     * name of decoration
+     */
     private String decoration;
+    /**
+     * list of ingredients
+     */
     private HashMap<Integer, String> listIngredients;
 
 
     /**
-     * Constructor
+     * Creates a Cocktail object with name, ingredient, amount in milliliters, cocktail decoration and a list of ingredients
      *
      * @param name, ingredient, amountMilliLiters, decoration, listIngredients
      */
@@ -31,7 +41,7 @@ public class Cocktail extends Drink{
     }
 
     /**
-     * Getter for
+     * Getter for ingredient
      *
      * @return ingredient
      */
@@ -39,7 +49,7 @@ public class Cocktail extends Drink{
         return ingredient;
     }
     /**
-     * Setter for
+     * Setter for ingredient
      *
      * @param ingredient
      */
@@ -47,7 +57,7 @@ public class Cocktail extends Drink{
         this.ingredient = ingredient;
     }
     /**
-     * Getter for
+     * Getter for amount in milliliters
      *
      * @return amountMilliLiters
      */
@@ -55,7 +65,7 @@ public class Cocktail extends Drink{
         return amountMilliLiters;
     }
     /**
-     * Setter for
+     * Setter for amount in milliliters
      *
      * @param amountMilliLiters
      */
@@ -63,7 +73,7 @@ public class Cocktail extends Drink{
         this.amountMilliLiters = amountMilliLiters;
     }
     /**
-     * Getter for getDecoration
+     * Getter for decoration
      *
      * @return decoration
      */
@@ -79,17 +89,17 @@ public class Cocktail extends Drink{
         this.decoration = decoration;
     }
     /**
-     * Getter for
+     * Getter for list of ingredients
      *
-     * @return
+     * @return listIngredients
      */
     public HashMap<Integer, String> getListIngredients() {
         return listIngredients;
     }
     /**
-     * Setter for
+     * Setter for list of ingredients
      *
-     * @param
+     * @param listIngredients
      */
     public void setListIngredients(HashMap<Integer, String> listIngredients) {
         this.listIngredients = listIngredients;
@@ -102,7 +112,9 @@ public class Cocktail extends Drink{
      *
      * @return the volume of drink in liter
      */
-    public abstract double getVolume();
+    public double getVolume() {
+        return 0;
+    }
 
     @Override
     /**
@@ -110,7 +122,9 @@ public class Cocktail extends Drink{
      *
      * @return alcohol volume percent (e.g. 50)
      */
-    public abstract double getAlcoholPercent();
+    public double getAlcoholPercent(){
+        return 0;
+    };
 
     @Override
     /**
@@ -118,9 +132,9 @@ public class Cocktail extends Drink{
      *
      * @return true when alcoholic liquids are present, otherwise false
      */
-    public abstract boolean isAlcoholic();
-
-
+    public boolean isAlcoholic(){
+        return true;
+    };
 
 
 }
