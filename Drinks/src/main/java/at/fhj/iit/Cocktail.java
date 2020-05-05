@@ -10,21 +10,13 @@ import java.util.HashMap;
 public class Cocktail extends Drink{
 
     /**
-     * name of ingredient
-     */
-    private String ingredient;
-    /**
-     * amount in milliliters
-     */
-    private int amountMilliLiters;
-    /**
      * name of decoration
      */
     private String decoration;
     /**
      * list of ingredients
      */
-    private HashMap<Integer, String> listIngredients;
+    private HashMap<Double, Liquid> listIngredients;
 
 
     /**
@@ -32,46 +24,12 @@ public class Cocktail extends Drink{
      *
      * @param name, ingredient, amountMilliLiters, decoration, listIngredients
      */
-    public Cocktail(String name, String ingredient, int amountMilliLiters, String decoration, HashMap<Integer, String> listIngredients) {
+    public Cocktail(String name, String decoration, HashMap<Double, Liquid> listIngredients) {
         super(name);
-        this.ingredient = ingredient;
-        this.amountMilliLiters = amountMilliLiters;
         this.decoration = decoration;
         this.listIngredients = listIngredients;
     }
 
-    /**
-     * Getter for ingredient
-     *
-     * @return ingredient
-     */
-    public String getIngredient() {
-        return ingredient;
-    }
-    /**
-     * Setter for ingredient
-     *
-     * @param ingredient
-     */
-    public void setIngredient(String ingredient) {
-        this.ingredient = ingredient;
-    }
-    /**
-     * Getter for amount in milliliters
-     *
-     * @return amountMilliLiters
-     */
-    public int getAmountMilliLiters() {
-        return amountMilliLiters;
-    }
-    /**
-     * Setter for amount in milliliters
-     *
-     * @param amountMilliLiters
-     */
-    public void setAmountMilliLiters(int amountMilliLiters) {
-        this.amountMilliLiters = amountMilliLiters;
-    }
     /**
      * Getter for decoration
      *
@@ -93,7 +51,8 @@ public class Cocktail extends Drink{
      *
      * @return listIngredients
      */
-    public HashMap<Integer, String> getListIngredients() {
+
+    public HashMap<Double, Liquid> getListIngredients() {
         return listIngredients;
     }
     /**
@@ -101,19 +60,23 @@ public class Cocktail extends Drink{
      *
      * @param listIngredients
      */
-    public void setListIngredients(HashMap<Integer, String> listIngredients) {
+    public void setListIngredients(HashMap<Double, Liquid> listIngredients) {
         this.listIngredients = listIngredients;
     }
 
-    @Override
+
     /**
-     *
      * Calculates and returns volume of drink
      *
      * @return the volume of drink in liter
      */
+    @Override
     public double getVolume() {
-        return 0;
+        double volumeIngredients = 0;
+        for (double volume: listIngredients.keySet()){
+            volumeIngredients +=  volume;
+        }
+        return volumeIngredients;
     }
 
     @Override
@@ -123,8 +86,12 @@ public class Cocktail extends Drink{
      * @return alcohol volume percent (e.g. 50)
      */
     public double getAlcoholPercent(){
-        return 0;
-    };
+        double totalAlcoholPercent = 0;
+        for (Liquid ingredient: listIngredients.values()){
+           totalAlcoholPercent +=  ingredient.getAlcoholPercent();
+        }
+        return totalAlcoholPercent;
+    }
 
     @Override
     /**
@@ -133,8 +100,22 @@ public class Cocktail extends Drink{
      * @return true when alcoholic liquids are present, otherwise false
      */
     public boolean isAlcoholic(){
-        return true;
-    };
+        if (getAlcoholPercent() > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    public void goingHome() throws DoNotDriveException{
+        try{
+            if (getAlcoholPercent() >= 3){
+                throw new DoNotDriveException("You're too drunk to drive! Take the bus..");
+            } else {
+                System.out.println("Drive carefully!");
+            }
+        }catch (DoNotDriveException e){
 
+        }
+    }
 }
