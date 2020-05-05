@@ -14,9 +14,9 @@ public class Cocktail extends Drink{
      */
     private String decoration;
     /**
-     * list of ingredients
+     * list of ingredients - order of mixed ingredients of type Liquid
      */
-    private HashMap<Double, Liquid> listIngredients;
+    private HashMap<Integer, Liquid> listIngredients;
 
     /**
      * Creates a Cocktail object with name, cocktail decoration and a list of ingredients
@@ -25,7 +25,7 @@ public class Cocktail extends Drink{
      * @param decoration
      * @param listIngredients
      */
-    public Cocktail(String name, String decoration, HashMap<Double, Liquid> listIngredients) {
+    public Cocktail(String name, String decoration, HashMap<Integer, Liquid> listIngredients) {
         super(name);
         this.decoration = decoration;
         this.listIngredients = listIngredients;
@@ -54,7 +54,7 @@ public class Cocktail extends Drink{
      *
      * @return listIngredients
      */
-    public HashMap<Double, Liquid> getListIngredients() {
+    public HashMap<Integer, Liquid> getListIngredients() {
         return listIngredients;
     }
 
@@ -63,7 +63,7 @@ public class Cocktail extends Drink{
      *
      * @param listIngredients
      */
-    public void setListIngredients(HashMap<Double, Liquid> listIngredients) {
+    public void setListIngredients(HashMap<Integer, Liquid> listIngredients) {
         this.listIngredients = listIngredients;
     }
 

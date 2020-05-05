@@ -20,12 +20,21 @@ Wir haben uns dazu entschieden, auch für das Schreiben des Lab-Reports unser Gi
 - Wir haben .gitignore schätzen gelernt, da wir damit nicht bei jeder Status-Abfrage .idea Files sehen müssen.  
 - Erstellung von JavaDoc in unserer eigenen abgeleiteten Klasse, sowie von einer eigener Exception.
 
-
-
+###### Dienstag, 05.05.2020
+- Erstellung von Methode GoingHome(). Diese wird im Anschluss   getestet. 
+- Erstellung der Klasse CocktailTest und hinzufügen von JavaDoc und einem zu testenden Cocktail. 
+- Installieren der Extension "Markdown Preview enhanced" in Visual Studio Code, um sich die Markdown-Änderung im Lab-Report anzeigen zu lassen. 
+<br></br>
+- Git stash Befehl zur Zwischenspeicherung bei unabsichtlichen Änderungen ausprobiert. 
 
 
 
 …
+
+---
+### Code Examples
+<br></br>
+
 
 ---
 ### Links / Literatur
