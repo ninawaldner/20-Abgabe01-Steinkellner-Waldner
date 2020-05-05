@@ -18,11 +18,12 @@ public class Cocktail extends Drink{
      */
     private HashMap<Double, Liquid> listIngredients;
 
-
     /**
-     * Creates a Cocktail object with name, ingredient, amount in milliliters, cocktail decoration and a list of ingredients
+     * Creates a Cocktail object with name, cocktail decoration and a list of ingredients
      *
-     * @param name, ingredient, amountMilliLiters, decoration, listIngredients
+     * @param name
+     * @param decoration
+     * @param listIngredients
      */
     public Cocktail(String name, String decoration, HashMap<Double, Liquid> listIngredients) {
         super(name);
@@ -38,6 +39,7 @@ public class Cocktail extends Drink{
     public String getDecoration() {
         return decoration;
     }
+
     /**
      * Setter for decoration
      *
@@ -46,15 +48,16 @@ public class Cocktail extends Drink{
     public void setDecoration(String decoration) {
         this.decoration = decoration;
     }
+
     /**
      * Getter for list of ingredients
      *
      * @return listIngredients
      */
-
     public HashMap<Double, Liquid> getListIngredients() {
         return listIngredients;
     }
+
     /**
      * Setter for list of ingredients
      *
@@ -63,7 +66,6 @@ public class Cocktail extends Drink{
     public void setListIngredients(HashMap<Double, Liquid> listIngredients) {
         this.listIngredients = listIngredients;
     }
-
 
     /**
      * Calculates and returns volume of drink
@@ -107,6 +109,11 @@ public class Cocktail extends Drink{
         }
     }
 
+    /**
+     * Gives information if you're fit to drive home
+     *
+     * @throws DoNotDriveException
+     */
     public void goingHome() throws DoNotDriveException{
         try{
             if (getAlcoholPercent() >= 3){
