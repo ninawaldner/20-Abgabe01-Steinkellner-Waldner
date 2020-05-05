@@ -21,11 +21,12 @@ Wir haben uns dazu entschieden, auch für das Schreiben des Lab-Reports unser Gi
 - Erstellung von JavaDoc in unserer eigenen abgeleiteten Klasse, sowie von einer eigener Exception.
 
 ###### Dienstag, 05.05.2020
-- Erstellung von Methode GoingHome(). Diese wird im Anschluss   getestet. 
+- Erstellung der Methode GoingHome(). Diese soll diese Woche getestet werden. 
 - Erstellung der Klasse CocktailTest und hinzufügen von JavaDoc und einem zu testenden Cocktail. 
 - Installieren der Extension "Markdown Preview enhanced" in Visual Studio Code, um sich die Markdown-Änderung im Lab-Report anzeigen zu lassen. 
-<br></br>
-- Git stash Befehl zur Zwischenspeicherung bei unabsichtlichen Änderungen ausprobiert. 
+- Git stash Befehl zur Zwischenspeicherung unabsichtlicher Änderungen ausprobiert. 
+
+###### Mittwoch, 06.05.2020
 
 
 
@@ -40,7 +41,7 @@ Wir haben uns dazu entschieden, auch für das Schreiben des Lab-Reports unser Gi
 ### Links / Literatur
 _Dokumentieren Sie hilfreiche Links zu Onlineliteratur bzw. welche Literatur Sie zur Erarbeitung der Abgabe/Übung verwendet haben._
 
-- **Git Tutorial:** https://www.youtube.com/watch?v=HVsySz-h9r4  
+- [**Git Tutorial**](https://www.youtube.com/watch?v=HVsySz-h9r4)  
 - [**Markdown Guide**](http://mdcheatsheet.com/)  
 - 
 
