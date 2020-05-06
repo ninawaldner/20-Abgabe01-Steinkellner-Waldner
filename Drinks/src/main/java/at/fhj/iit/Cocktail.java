@@ -16,19 +16,19 @@ public class Cocktail extends Drink{
     /**
      * list of ingredients - order of mixed ingredients of type Liquid
      */
-    private HashMap<Integer, Liquid> listIngredients;
+    private HashMap<Integer, Liquid> ingredients;
 
     /**
      * Creates a Cocktail object with name, cocktail decoration and a list of ingredients
      *
      * @param name
      * @param decoration
-     * @param listIngredients
+     * @param ingredients
      */
-    public Cocktail(String name, String decoration, HashMap<Integer, Liquid> listIngredients) {
+    public Cocktail(String name, String decoration, HashMap<Integer, Liquid> ingredients) {
         super(name);
         this.decoration = decoration;
-        this.listIngredients = listIngredients;
+        this.ingredients = ingredients;
     }
 
     /**
@@ -54,17 +54,17 @@ public class Cocktail extends Drink{
      *
      * @return listIngredients
      */
-    public HashMap<Integer, Liquid> getListIngredients() {
-        return listIngredients;
+    public HashMap<Integer, Liquid> getIngredients() {
+        return ingredients;
     }
 
     /**
      * Setter for list of ingredients
      *
-     * @param listIngredients
+     * @param ingredients
      */
-    public void setListIngredients(HashMap<Integer, Liquid> listIngredients) {
-        this.listIngredients = listIngredients;
+    public void setIngredients(HashMap<Integer, Liquid> ingredients) {
+        this.ingredients = ingredients;
     }
 
     /**
@@ -75,8 +75,8 @@ public class Cocktail extends Drink{
     @Override
     public double getVolume() {
         double volumeIngredients = 0;
-        for (double volume: listIngredients.keySet()){
-            volumeIngredients +=  volume;
+        for (Liquid ingredient: ingredients.values()){
+            volumeIngredients +=  ingredient.getVolume();
         }
         return volumeIngredients;
     }
@@ -89,7 +89,7 @@ public class Cocktail extends Drink{
      */
     public double getAlcoholPercent(){
         double totalAlcoholPercent = 0;
-        for (Liquid ingredient: listIngredients.values()){
+        for (Liquid ingredient: ingredients.values()){
            totalAlcoholPercent +=  ingredient.getAlcoholPercent();
         }
         return totalAlcoholPercent;
@@ -102,11 +102,7 @@ public class Cocktail extends Drink{
      * @return true when alcoholic liquids are present, otherwise false
      */
     public boolean isAlcoholic(){
-        if (getAlcoholPercent() > 0){
-            return true;
-        } else {
-            return false;
-        }
+        return getAlcoholPercent() > 0;
     }
 
     /**
