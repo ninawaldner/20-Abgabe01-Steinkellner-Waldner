@@ -27,7 +27,9 @@ Wir haben uns dazu entschieden, auch für das Schreiben des Lab-Reports unser Gi
 - Git stash Befehl zur Zwischenspeicherung unabsichtlicher Änderungen ausprobiert. 
 
 ###### Mittwoch, 06.05.2020
-
+- Tests erstellt! Hurra, es funktioniert!
+- Shortcuts IntelliJ ausprobiert
+- Git reset Befehl, um geaddete Dateien wieder rückgängig zu machen. 
 
 
 …
@@ -43,7 +45,8 @@ _Dokumentieren Sie hilfreiche Links zu Onlineliteratur bzw. welche Literatur Sie
 
 - [**Git Tutorial**](https://www.youtube.com/watch?v=HVsySz-h9r4)  
 - [**Markdown Guide**](http://mdcheatsheet.com/)  
-- 
+- [**Unit testing IntelliJ**](https://www.youtube.com/watch?v=QDFI19lj4OM&list=PLjHcbF9Ubo1fL1eUBnf1leG_MPvFnRo3c&index=19)  
+- [**JUnit 5 in IntelliJ**](https://www.youtube.com/watch?v=o5pE7L2tVV8&list=PLjHcbF9Ubo1fL1eUBnf1leG_MPvFnRo3c&index=20) 
 
 …
 
