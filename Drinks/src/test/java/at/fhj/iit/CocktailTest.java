@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,7 @@ public class CocktailTest {
     @Test
     @DisplayName("Testing the Cocktail Constructor")
     void testCocktailConstructor() {
-        assertEquals(virginMary.getName(), "Virgin Mary");
+        assertEquals(virginMary.name, "Virgin Mary");
         assertEquals(virginMary.getDecoration(), "Ground pepper");
         assertEquals(virginMary.getIngredients(), ingredients2);
     }
@@ -82,15 +83,31 @@ public class CocktailTest {
         assertTrue(mojito.isAlcoholic());
     }
 
+//    @Test
+//    @DisplayName("Testing the goingHome method")
+//    void goingHomeTest1() throws DoNotDriveException {
+//            assertEquals(virginMary.goingHome(), "Drive carefully!");
+//    }
+
     @Test
-    @DisplayName("Testing the goingHome method")
-    void goingHomeTest() throws DoNotDriveException {
-        assertEquals(virginMary.goingHome(), "Drive carefully!");
+    @DisplayName("Testing the goingHome method and exception gets thrown")
+    void goingHomeTest() {
+        try {
+            virginMary.goingHome();
+        } catch (DoNotDriveException e){
+            assertEquals(e.getMessage(), "You're too drunk to drive! Take the bus..");
+        }
     }
+
+//    @Test
+//    @DisplayName("Testing, if Exception gets thrown")
+//    void goingHomeExceptionTest() {
+//        assertThrows(DoNotDriveException.class, () -> mojito.goingHome());
+//    }
 
     @Test
     @DisplayName("Testing, if Exception gets thrown")
-    void goingHomeExceptionTest() {
+    void goingHomeExceptionTest1() {
         assertThrows(DoNotDriveException.class, () -> mojito.goingHome());
     }
 }

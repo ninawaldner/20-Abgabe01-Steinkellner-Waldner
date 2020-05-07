@@ -12,8 +12,9 @@ class SimpleDrinkTest {
     /**
      *
      */
-   protected Liquid l;
+   protected Liquid l, ln;
     private SimpleDrink wine;
+    private SimpleDrink water;
 
     /**
      * inits an alcoholic liquid for EACH test
@@ -22,30 +23,42 @@ class SimpleDrinkTest {
     void setup() {
         // SETUP PHASE
         l = new Liquid("Wein", 0.125, 13);
-       wine = new SimpleDrink("Wein", l);
+        ln = new Liquid("Wasser", 0.3, 0);
+        water = new SimpleDrink("Wasser", ln);
+        wine = new SimpleDrink("Wein", l);
+    }
+
+    @Test
+    @DisplayName("Testing constructor alcoholic")
+    public void testConstructorAlcoholic(){
+        assertEquals(wine.name, "Wein");
+        assertEquals(wine.getAlcoholPercent(),   13);
+        assertEquals(wine.getVolume(), 0.125);
     }
 
     @Test
     @DisplayName("Testing constructor non alcoholic")
     public void testConstructorNonAlcoholic(){
-        assertEquals(wine.l.getName(), "Wein");
-        assertEquals(wine.l.getAlcoholPercent(),   13);
-        assertEquals(wine.l.getVolume(), 0.125);
+        assertEquals(water.name, "Wasser");
+        assertEquals(water.getAlcoholPercent(),   0);
+        assertEquals(water.getVolume(), 0.3);
     }
 
     @Test
     @DisplayName("Testing volume getter")
-    void getVolume() {
-
+    void testVolumeGetter() {
+        assertEquals(wine.getVolume(), 0.125);
     }
 
     @Test
-    @DisplayName("Testing volume getter")
-    void getAlcoholPercent() {
+    @DisplayName("Testing alcohol percent getter")
+    void testAlcoholPercentGetter() {
+        assertEquals(wine.getAlcoholPercent(), 13);
     }
 
     @Test
-    @DisplayName("Testing volume setter")
-    void isAlcoholic() {
+    @DisplayName("Testing is alcoholic drink")
+    void testIsAlcoholic() {
+        assertTrue(wine.isAlcoholic());
     }
 }
