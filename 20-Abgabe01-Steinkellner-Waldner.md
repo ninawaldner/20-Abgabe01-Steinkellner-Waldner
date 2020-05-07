@@ -40,7 +40,9 @@ Die Coverage kann man sich so anzeigen lassen: Den Playbutton links neben dem Na
 
 ---
 ### Code Examples
-![**DoNotDriveException**](exception.jpg)  
+![**Going Home Method**](./exception.jpg)  
+![**Exception Test**](./exceptiontest.jpg)  
+![**Test setup**](./testsetup.jpg) 
 
 ---
 ### Links / Literatur
