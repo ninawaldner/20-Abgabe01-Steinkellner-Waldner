@@ -12,13 +12,11 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Testing Cocktail implementation")
 public class CocktailTest {
 
-    private Cocktail mojito, virginMary;
+    private Cocktail mojito;
+    private Cocktail virginMary;
     private HashMap<Integer, Liquid> ingredients1 = new HashMap<>();
-    private HashMap<Integer, Liquid> ingredients2 =new HashMap<>();
+    private HashMap<Integer, Liquid> ingredients2 = new HashMap<>();
 
-    /**
-     *
-     */
     @BeforeEach
     void setup() {
 
@@ -32,6 +30,7 @@ public class CocktailTest {
     }
 
     @Test
+    @DisplayName("Testing the Cocktail Constructor")
     void testCocktailConstructor() {
         assertEquals(virginMary.getName(), "Virgin Mary");
         assertEquals(virginMary.getDecoration(), "Ground pepper");
@@ -39,51 +38,58 @@ public class CocktailTest {
     }
 
     @Test
+    @DisplayName("Testing the Decoration Getter")
     void testDecorationGetter() {
         mojito.setDecoration("Spearmint Sprigs");
         assertEquals(mojito.getDecoration(), "Spearmint Sprigs");
     }
 
     @Test
+    @DisplayName("Testing the Decoration Setter")
     void testDecorationSetter() {
         mojito.setDecoration("Peppermint Sprigs");
         assertEquals(mojito.getDecoration(), "Peppermint Sprigs");
     }
 
     @Test
+    @DisplayName("Testing the Ingredients Getter")
     void testIngredientsGetter() {
         assertEquals(mojito.getIngredients(), ingredients1);
     }
 
     @Test
+    @DisplayName("Testing the Ingredients Setter")
     void testIngredientsSetter() {
         mojito.setIngredients(ingredients1);
         assertEquals(mojito.getIngredients(), ingredients1);
     }
 
     @Test
+    @DisplayName("Testing the Volume Getter")
     void testVolumeGetter() {
         assertEquals(mojito.getVolume(), 0.5);
     }
 
     @Test
+    @DisplayName("Testing the Alcohol Percent Getter")
     void testAlcoholPercentGetter() {
         assertEquals(mojito.getAlcoholPercent(), 0.4);
     }
 
     @Test
+    @DisplayName("Testing the isAlcoholic method")
     void isAlcoholicTest() {
         assertTrue(mojito.isAlcoholic());
     }
 
     @Test
+    @DisplayName("Testing the goingHome method")
     void goingHomeTest() throws DoNotDriveException {
-        assertEquals(mojito.goingHome(), "Take the bus!");
         assertEquals(virginMary.goingHome(), "Drive carefully!");
-
     }
 
     @Test
+    @DisplayName("Testing, if Exception gets thrown")
     void goingHomeExceptionTest() {
         assertThrows(DoNotDriveException.class, () -> mojito.goingHome());
     }
