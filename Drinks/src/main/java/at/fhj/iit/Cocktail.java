@@ -6,6 +6,7 @@ import java.util.HashMap;
 /**
  * Class represents a cocktail drink liquid which mixes liquids with several other ingredients
  * and makes it pretty with a delicious decoration
+ * @author: Rosa Steinkellner, Nina Waldner
  */
 public class Cocktail extends Drink{
 
