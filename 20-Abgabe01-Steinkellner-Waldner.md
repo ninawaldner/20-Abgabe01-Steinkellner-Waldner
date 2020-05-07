@@ -17,20 +17,24 @@ _Notieren Sie Ihr Vorgehen in den Übungen, dokumentieren Sie fortlaufend wichti
 - Erstellung des Lab-Reports als md-Datei:  
 Wir haben uns dazu entschieden, auch für das Schreiben des Lab-Reports unser Git-Repository zu nutzen. Einerseits, weil es die Zusammenarbeit erleichtert, Änderungen leicht nachvollziehbar macht und man sie falls nötig leicht wieder rückgängig machen kann. Andererseits, weil wir dadurch noch mehr Gelegenheit haben, an unseren pull/commit/push... Fertigkeiten zu feilen.  
 
-- Wir haben .gitignore schätzen gelernt, da wir damit nicht bei jeder Status-Abfrage .idea Files sehen müssen.  
+- Wir haben **.gitignore** schätzen gelernt, da wir damit nicht bei jeder Status-Abfrage .idea Files sehen müssen.  
 - Erstellung von JavaDoc in unserer eigenen abgeleiteten Klasse, sowie von einer eigener Exception.
 
 ###### Dienstag, 05.05.2020
 - Erstellung der Methode GoingHome(). Diese soll diese Woche getestet werden. 
 - Erstellung der Klasse CocktailTest und hinzufügen von JavaDoc und einem zu testenden Cocktail. 
 - Installieren der Extension "Markdown Preview enhanced" in Visual Studio Code, um sich die Markdown-Änderung im Lab-Report anzeigen zu lassen. 
-- Git stash Befehl zur Zwischenspeicherung unabsichtlicher Änderungen ausprobiert. 
+- **Git stash** Befehl zur Zwischenspeicherung unabsichtlicher Änderungen ausprobiert. 
 
 ###### Mittwoch, 06.05.2020
-- Tests erstellt! Hurra, es funktioniert!
-- Shortcuts IntelliJ ausprobiert
-- Git reset Befehl, um geaddete Dateien wieder rückgängig zu machen. 
+- Erste Tests für die Cocktail Klasse erstellt! Hurra, es funktioniert!
+- Shortcuts IntelliJ ausprobiert: 
+- **Git reset** Befehl, um geaddete Dateien wieder aus der staging area zurück zu nehmen. 
+###### Donnerstag, 07.05.2020
+- Erstellung der noch fehlenden Methoden in der CocktailTest Klasse --> 100% Coverage erreicht :)  
+Die Coverage kann man sich so anzeigen lassen: Den Playbutton links neben dem Namen der Klasse anklicken und 'Run 'CocktailTest' with Coverage' auswählen. In Folge erscheint ein eigenes Fenster, in dem die Test-Abdeckung von jeder Klasse, jeder Methode und jeder Zeile aufgeschlüsselt wird.
 
+- Erstellung der SimpleDrinkTest Klasse
 
 …
 
