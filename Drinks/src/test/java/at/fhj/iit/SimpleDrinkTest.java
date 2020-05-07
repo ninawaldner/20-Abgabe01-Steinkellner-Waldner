@@ -34,13 +34,13 @@ class SimpleDrinkTest {
     }
 
     @Test
-    @DisplayName("Testing constructor non alcoholic")
+    @DisplayName("Testing volume getter")
     void getVolume() {
 
     }
 
     @Test
-    @DisplayName("Testing volume setter")
+    @DisplayName("Testing volume getter")
     void getAlcoholPercent() {
     }
 
