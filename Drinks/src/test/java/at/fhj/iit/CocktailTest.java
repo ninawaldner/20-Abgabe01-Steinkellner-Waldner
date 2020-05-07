@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,19 +12,30 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Testing Cocktail implementation")
 public class CocktailTest {
 
-    private Cocktail mojito, cosmopolitan;
+    private Cocktail mojito, virginMary;
     private HashMap<Integer, Liquid> ingredients1 = new HashMap<>();
+    private HashMap<Integer, Liquid> ingredients2 =new HashMap<>();
 
     /**
      *
      */
     @BeforeEach
-    void setup(){
+    void setup() {
 
         ingredients1.put(1, new Liquid("White Rum", 0.2, 0.4));
         ingredients1.put(2, new Liquid("Soda Water", 0.3, 0.0));
+        ingredients2.put(1, new Liquid("Tomato juice", 0.3, 0.0));
+        ingredients2.put(2, new Liquid("Soda Water", 0.5, 0.0));
 
         mojito = new Cocktail("Mojito", "Mint Sprigs", ingredients1);
+        virginMary = new Cocktail("Virgin Mary", "Ground pepper", ingredients2);
+    }
+
+    @Test
+    void testCocktailConstructor() {
+        assertEquals(virginMary.getName(), "Virgin Mary");
+        assertEquals(virginMary.getDecoration(), "Ground pepper");
+        assertEquals(virginMary.getIngredients(), ingredients2);
     }
 
     @Test
@@ -67,11 +77,14 @@ public class CocktailTest {
     }
 
     @Test
-    void goingHomeTest() {
-        Throwable exception = assertThrows(DoNotDriveException.class, () ->{
-        throw new DoNotDriveException("You're too drunk to drive! Take the bus...");});
+    void goingHomeTest() throws DoNotDriveException {
+        assertEquals(mojito.goingHome(), "Take the bus!");
+        assertEquals(virginMary.goingHome(), "Drive carefully!");
+
     }
 
-
-
+    @Test
+    void goingHomeExceptionTest() {
+        assertThrows(DoNotDriveException.class, () -> mojito.goingHome());
+    }
 }
