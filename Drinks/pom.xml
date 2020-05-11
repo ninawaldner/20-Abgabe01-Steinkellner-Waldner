@@ -53,6 +53,32 @@
       <timezone>Europe/Vienna</timezone>
       <properties/>
     </developer>
+    <developer>
+      <id>ninawaldner</id>
+      <name>Nina Waldner</name>
+      <email>nina.waldner@edu.campus02.at</email>
+      <url>https://github.com/ninawaldner</url>
+      <organization>CAMPUS 02 Fachhochschule der Wirtschaft GmbH</organization>
+      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik/bachelor/bsd/</organizationUrl>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+      <properties/>
+    </developer>
+    <developer>
+      <id>RosaSteinkellner</id>
+      <name>Rosa Steinkellner</name>
+      <email>rosa.steinkellner@edu.campus02.at</email>
+      <url>https://github.com/RosaSteinkellner</url>
+      <organization>CAMPUS 02 Fachhochschule der Wirtschaft GmbH</organization>
+      <organizationUrl>https://www.campus02.at/wirtschaftsinformatik/bachelor/bsd/</organizationUrl>
+      <roles>
+        <role>Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+      <properties/>
+    </developer>
   </developers>
 
   <properties>
