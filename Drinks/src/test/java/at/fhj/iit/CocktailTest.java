@@ -1,12 +1,16 @@
 package at.fhj.iit;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * This is a test class for the Cocktail class, which tests the functionality of every method.
+ *
  * @author: Rosa Steinkellner, Nina Waldner
  */
 @DisplayName("Testing Cocktail implementation")
@@ -78,7 +82,7 @@ public class CocktailTest {
     }
 
     /**
-     *  Tests if the Ingredients Getter does what it should do by using the assertEquals() method
+     * Tests if the Ingredients Getter does what it should do by using the assertEquals() method
      */
     @Test
     @DisplayName("Testing the Ingredients Setter")
@@ -88,7 +92,7 @@ public class CocktailTest {
     }
 
     /**
-     *  Tests if the Volume Getter does what it should do by using the assertEquals() method
+     * Tests if the Volume Getter does what it should do by using the assertEquals() method
      */
     @Test
     @DisplayName("Testing the Volume Getter")
@@ -97,7 +101,7 @@ public class CocktailTest {
     }
 
     /**
-     *  Tests if the Alcohol Percent Getter does what it should do by using the assertEquals() method
+     * Tests if the Alcohol Percent Getter does what it should do by using the assertEquals() method
      */
     @Test
     @DisplayName("Testing the Alcohol Percent Getter")
@@ -117,12 +121,13 @@ public class CocktailTest {
 
     /**
      * Tests if the goingHome() method returns the proper answer for a non-alcoholic cocktail
+     *
      * @throws DoNotDriveException
      */
     @Test
     @DisplayName("Testing the goingHome method")
     void goingHomeTest1() throws DoNotDriveException {
-            assertEquals(virginMary.goingHome(), "Drive carefully!");
+        assertEquals(virginMary.goingHome(), "Drive carefully!");
     }
 
     /**
@@ -133,4 +138,5 @@ public class CocktailTest {
     void goingHomeExceptionTest1() {
         assertThrows(DoNotDriveException.class, () -> mojito.goingHome());
     }
+
 }
