@@ -1,7 +1,7 @@
 # Lab Report
-**Abgabe 01**
-Rosa Steinkellner
-Nina Waldner
+**Abgabe 01**  <br>
+Rosa Steinkellner <br>
+Nina Waldner  <br>
 **Repository:** https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner
 
 ---
@@ -49,11 +49,6 @@ Die Coverage kann man sich so anzeigen lassen: Den Playbutton links neben dem Na
 
 …
 
----
-### Hilfreiche Grafiken 
-![Git Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/git-commands.jpg)  
-![JavaDoc Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/javadoc-commands.jpg)  
-![JUnit Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/junit-commands.jpg) 
 
 ---
 ### Links / Literatur
@@ -65,5 +60,11 @@ _Dokumentieren Sie hilfreiche Links zu Onlineliteratur bzw. welche Literatur Sie
 - [**JUnit 5 in IntelliJ**](https://www.youtube.com/watch?v=o5pE7L2tVV8&list=PLjHcbF9Ubo1fL1eUBnf1leG_MPvFnRo3c&index=20) 
 
 …
+---
+### Hilfreiche Grafiken 
+![Git Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/git-commands.jpg)  <br></br>
+![JavaDoc Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/javadoc-commands.jpg)  <br></br>
+![JUnit Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/junit-commands.jpg) 
+
 
     
