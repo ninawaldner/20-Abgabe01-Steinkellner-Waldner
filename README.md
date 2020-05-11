@@ -16,48 +16,34 @@ Tests using JUnit 5 are also already implemented.
 #### ***Planned Extensions:***
 
 1. *Ideas for Subclasses* 
-    >Cocktail.java: inherits from class Drink.java
-    FizzyDrinks.java: inherits from class SimpleDrinks.java
-    Smoothies.java: inherits from class SimpleDrinks.java
-    DarryDrinks.java: inherits from class SimpleDrinks.java
-    BeerMixDrinks.java: inherits from class Drinks.java
+    - >Cocktail.java: inherits from class Drink.java<br>
+    - >FizzyDrinks.java: inherits from class SimpleDrinks.java<br>
+    - >Smoothies.java: inherits from class SimpleDrinks.java<br>
+    - > DarryDrinks.java: inherits from class SimpleDrinks.java<br>
+    - >BeerMixDrinks.java: inherits from class Drinks.java<br>
 2. *Exception*
 3. *Collections*<br/> List of ingredients
-***
-#### ***Next version***
-
-Decision for Subclass:  <strong>Cocktails</strong> 
-
-
-1. ###### Collections: HashMap ingredients:  
-- Liquid ingredient
-- Integer for ordered ingredients in list
-
-2. ###### Decorations: one decorational item per drink (ananas, cherry,...)
-- String decoration
-
-    or   
-- List of an order of Cocktails
-
-3. ###### Exception: DoNotDriveException
-- drivingCar () --> now you can't drive a car anymore (alcohol percent > 3)
-
 
 ***
-#### ***Final adapted version***
+#### ***Final version***
 
-##### Cocktails.java
+### Decision for Subclass:  <strong>Cocktails</strong> 
 
-2 Variables: 
-> String decoration
-HashMap ingredients (Integer, String)
+#### 2 Variables: 
+- > String decoration:<br>
+    one decorational item per drink (ananas, cherry,...)
+- > HashMap ingredients (Integer, String)<br>
+    Liquid ingredient
 
-Methods: 
+#### Methods: 
 - > Getters and setters for the class variables
 - > Getters for volume and alcohol percent of cocktail
 - > Method that returns true if a cocktail is alcoholic
-- > Method that checks if you are fit to go home by car.
-DoNotDriveException is thrown if the the alcohol percentage of the cocktail is too high
+- > Method that checks if you are fit to go home by car<br>
+
+#### Exception: DoNotDriveException
+- > DoNotDriveException is thrown if the the alcohol percentage of the cocktail is too high
+- > goingHome() --> if you're not fit to drive anymore (alcohol percent >= 3)
 
 
 ***
@@ -73,6 +59,3 @@ In addition the getters and setters for decoration and ingredients are being put
 
 ***
 #### ***Code examples***
-![**DoNotDriveException**](exception.jpg)  
-![**DoNotDriveException**](exceptiontest.jpg)  
-![**DoNotDriveException**](testsetup.jpg)  
