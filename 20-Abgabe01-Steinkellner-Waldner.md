@@ -26,6 +26,9 @@ Wir haben uns dazu entschieden, auch für das Schreiben des Lab-Reports unser Gi
 - Installieren der Extension "Markdown Preview enhanced" in Visual Studio Code, um sich die Markdown-Änderung im Lab-Report anzeigen zu lassen. 
 - **Git stash** Befehl zur Zwischenspeicherung unabsichtlicher Änderungen ausprobiert. 
 ![Git stash Befehl](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/git_stash.png) 
+- **Git push --force** Befehl - Nach dem Motto: "Wo ein Wille ist, ist auch ein Weg"
+![Git push --force Befehl](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/git-force-nina.jpg) 
+
 
 
 ###### Mittwoch, 06.05.2020
@@ -47,10 +50,10 @@ Die Coverage kann man sich so anzeigen lassen: Den Playbutton links neben dem Na
 …
 
 ---
-### Code Examples
-![**Going Home Method**](./exception.jpg)  
-![**Exception Test**](./exceptiontest.jpg)  
-![**Test setup**](./testsetup.jpg) 
+### Hilfreiche Grafiken 
+![Git Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/git-commands.jpg)  
+![JavaDoc Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/javadoc-commands.jpg)  
+![JUnit Commands](https://github.com/ninawaldner/20-Abgabe01-Steinkellner-Waldner/blob/master/screenshots/junit-commands.jpg) 
 
 ---
 ### Links / Literatur
