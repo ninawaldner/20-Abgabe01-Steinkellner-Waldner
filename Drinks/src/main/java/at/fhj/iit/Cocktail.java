@@ -6,9 +6,10 @@ import java.util.HashMap;
 /**
  * Class represents a cocktail drink liquid which mixes liquids with several other ingredients
  * and makes it pretty with a delicious decoration
+ *
  * @author: Rosa Steinkellner, Nina Waldner
  */
-public class Cocktail extends Drink{
+public class Cocktail extends Drink {
 
     /**
      * name of decoration
@@ -22,14 +23,23 @@ public class Cocktail extends Drink{
     /**
      * Creates a Cocktail object with name, cocktail decoration and a list of ingredients
      *
-     * @param name
-     * @param decoration
+     * @param name        Name of the Cocktail
+     * @param decoration  Decoration to put in the glass
      * @param ingredients
      */
     public Cocktail(String name, String decoration, HashMap<Integer, Liquid> ingredients) {
         super(name);
         this.decoration = decoration;
         this.ingredients = ingredients;
+    }
+
+    /**
+     * Getter for name
+     *
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -76,8 +86,8 @@ public class Cocktail extends Drink{
     @Override
     public double getVolume() {
         double volumeIngredients = 0;
-        for (Liquid ingredient: ingredients.values()){
-            volumeIngredients +=  ingredient.getVolume();
+        for (Liquid ingredient : ingredients.values()) {
+            volumeIngredients += ingredient.getVolume();
         }
         return volumeIngredients;
     }
@@ -88,10 +98,10 @@ public class Cocktail extends Drink{
      *
      * @return alcohol volume percent (e.g. 50)
      */
-    public double getAlcoholPercent(){
+    public double getAlcoholPercent() {
         double totalAlcoholPercent = 0;
-        for (Liquid ingredient: ingredients.values()){
-           totalAlcoholPercent +=  ingredient.getAlcoholPercent();
+        for (Liquid ingredient : ingredients.values()) {
+            totalAlcoholPercent += ingredient.getAlcoholPercent();
         }
         return totalAlcoholPercent;
     }
@@ -102,7 +112,7 @@ public class Cocktail extends Drink{
      *
      * @return true when alcoholic liquids are present, otherwise false
      */
-    public boolean isAlcoholic(){
+    public boolean isAlcoholic() {
         return getAlcoholPercent() > 0;
     }
 
@@ -111,15 +121,11 @@ public class Cocktail extends Drink{
      *
      * @throws DoNotDriveException
      */
-    public void goingHome() throws DoNotDriveException{
-        try{
-            if (getAlcoholPercent() >= 3){
-                throw new DoNotDriveException("You're too drunk to drive! Take the bus..");
-            } else {
-                System.out.println("Drive carefully!");
-            }
-        }catch (DoNotDriveException e){
-
+    public String goingHome() throws DoNotDriveException {
+        if (getAlcoholPercent() >= 0.3) {
+            throw new DoNotDriveException("You're too drunk to drive! Take the bus..");
+        } else {
+            return "Drive carefully!";
         }
     }
 }

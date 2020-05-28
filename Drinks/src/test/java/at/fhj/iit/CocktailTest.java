@@ -135,7 +135,7 @@ public class CocktailTest {
      */
     @Test
     @DisplayName("Testing, if Exception gets thrown")
-    void goingHomeExceptionTest1() {
+    void goingHomeExceptionTest() {
         assertThrows(DoNotDriveException.class, () -> mojito.goingHome());
     }
 
